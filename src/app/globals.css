@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 8 8 10;
+    --foreground: 244 244 245;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #08080a;
+    color: #e4e4e7;
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    selection-background-color: #cba864;
+    selection-color: #08080a;
+  }
+
+  /* Custom high-end scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #08080a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #262630;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #cba864;
+  }
+}
+
+@layer utilities {
+  .font-serif-luxury {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #fff4d2 0%, #cba864 50%, #997838 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gold-diagonal-line {
+    position: absolute;
+    background: linear-gradient(90deg, transparent, rgba(203, 168, 100, 0.35), transparent);
+    height: 1px;
+    pointer-events: none;
+  }
+
+  .bg-luxury-grid {
+    background-image: radial-gradient(rgba(203, 168, 100, 0.08) 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+
+  .card-border-gold {
+    border: 1px solid rgba(203, 168, 100, 0.22);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card-border-gold:hover {
+    border-color: rgba(203, 168, 100, 0.6);
+    box-shadow: 0 10px 30px -10px rgba(203, 168, 100, 0.25);
+  }
+}
+
